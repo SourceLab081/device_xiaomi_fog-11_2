@@ -256,3 +256,5 @@ WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 # Inherit the proprietary files
 include vendor/xiaomi/fog/BoardConfigVendor.mk
+#test
+include vendor/carbon/config/BoardConfigSoong.mk
