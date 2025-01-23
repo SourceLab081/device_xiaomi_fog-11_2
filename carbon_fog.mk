@@ -15,9 +15,6 @@ TARGET_USE_GENERIC_WALLPAPER := true
 # Inherit from fog device
 $(call inherit-product, device/xiaomi/fog/device.mk)
 
-# Define first api level
-$(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk)
-
 PRODUCT_NAME := carbon_fog
 PRODUCT_DEVICE := fog
 PRODUCT_MANUFACTURER := Xiaomi
