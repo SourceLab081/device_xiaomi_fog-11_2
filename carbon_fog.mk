@@ -4,18 +4,19 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-# Inherit Carbon GSM telephony parts
-$(call inherit-product, vendor/carbon/config/gsm.mk)
-
-# Inherit common.
-$(call inherit-product, vendor/carbon/config/common.mk)
-
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
+# Inherit some common Lineage stuff
+$(call inherit-product, vendor/carbon/config/common.mk)
+TARGET_USE_GENERIC_WALLPAPER := true
+
 # Inherit from fog device
 $(call inherit-product, device/xiaomi/fog/device.mk)
+
+# Define first api level
+$(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk)
 
 PRODUCT_NAME := carbon_fog
 PRODUCT_DEVICE := fog
@@ -24,6 +25,14 @@ PRODUCT_BRAND := Redmi
 PRODUCT_MODEL := Redmi 10C
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
+
+TARGET_VENDOR_PRODUCT_NAME := fog
+
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    PRODUCT_NAME="fog"
+
+#TARGET_GAPPS_ARCH := ARM64
+TARGET_BOOT_ANIMATION_RES := 720
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="fog-user 11 RKQ1.211001.001 V13.0.13.0.RGEMIXM release-keys"
