@@ -279,10 +279,10 @@ PRODUCT_SET_DEBUGFS_RESTRICTIONS := true
 # Keymaster
 PRODUCT_PACKAGES += \
     android.hardware.keymaster@4.1.vendor
-
+#temp remove
 # Lights
-PRODUCT_PACKAGES += \
-    android.hardware.lights-service.xiaomi_bengal
+# PRODUCT_PACKAGES += \
+  #  android.hardware.lights-service.xiaomi_bengal
 
 # Media
 PRODUCT_PACKAGES += \
