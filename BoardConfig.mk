@@ -127,6 +127,7 @@ BOARD_KERNEL_CMDLINE += \
 
 BOARD_KERNEL_CMDLINE += androidboot.fstab_suffix=qcom
 BOARD_KERNEL_CMDLINE += androidboot.init_fatal_reboot_target=recovery
+BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 TARGET_FORCE_PREBUILT_KERNEL := true
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_CONFIG := vendor/fog-perf_defconfig
@@ -222,9 +223,10 @@ BOARD_VNDK_VERSION := current
 # Sepolicy
 include device/xiaomi/fog/sepolicy/vndr/SEPolicy.mk
 
-SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
-SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/public
+BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private
+BOARD_PLAT_PUBLIC_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/public
 BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
+BUILD_BROKEN_VENDOR_PROPERTY_NAMESPACE := true
 
 # Verified Boot
 BOARD_AVB_ENABLE := true
