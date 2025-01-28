@@ -1,4 +1,5 @@
-allow untrusted_app proc:file { getattr  open  read };
+allow untrusted_app proc:file { getattr };
+dontaudit untrusted_app proc:file { open read };
 allow untrusted_app proc_zoneinfo:file { open };
 allow untrusted_app unlabeled:dir { search };
 allow untrusted_app app_data_file:file { execute };
