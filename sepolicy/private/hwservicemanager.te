@@ -1,1 +1,1 @@
-allow hwservicemanager init:binder { call  transfer };
+dontaudit hwservicemanager init:binder { call  transfer };
