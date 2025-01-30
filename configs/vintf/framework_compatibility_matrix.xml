@@ -7,9 +7,25 @@
             <instance>default</instance>
         </interface>
     </hal>
+    <hal format="aidl" optional="true">
+        <name>android.hardware.bluetooth.audio</name>
+        <version>2</version>
+        <interface>
+            <name>IBluetoothAudioProviderFactory</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
     <hal format="hidl" optional="true">
+        <name>android.hardware.boot</name>
+        <version>1.2</version>
+        <interface>
+            <name>IBootControl</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="aidl" optional="true">
         <name>android.hardware.drm</name>
-        <version>1.4</version>
+        <version>1</version>
         <interface>
             <name>ICryptoFactory</name>
             <instance>clearkey</instance>
@@ -48,7 +64,7 @@
     </hal>
     <hal format="hidl" optional="true">
         <name>android.hardware.radio</name>
-        <version>1.0-4</version>
+        <version>1.0-5</version>
         <interface>
             <name>IRadio</name>
             <instance>slot1</instance>
@@ -78,7 +94,7 @@
     </hal>
     <hal format="aidl" optional="true">
         <name>android.hardware.wifi.supplicant</name>
-        <version>1.0-4</version>
+        <version>1</version>
         <interface>
             <name>ISupplicant</name>
             <instance>default</instance>
@@ -86,7 +102,7 @@
     </hal>
     <hal format="aidl" optional="true">
         <name>android.hardware.wifi.hostapd</name>
-        <version>1.0</version>
+        <version>1</version>
         <interface>
             <name>IHostapd</name>
             <instance>default</instance>
@@ -214,7 +230,7 @@
     </hal>
     <hal format="hidl" optional="true">
         <name>vendor.nxp.nxpnfc</name>
-        <version>1.0</version>
+        <version>2.0</version>
         <interface>
             <name>INxpNfc</name>
             <instance>default</instance>
@@ -365,7 +381,6 @@
     </hal>
     <hal format="hidl" optional="true">
         <name>vendor.qti.hardware.display.allocator</name>
-        <version>1.0</version>
         <version>3.0</version>
         <version>4.0</version>
         <interface>
@@ -375,7 +390,6 @@
     </hal>
     <hal format="hidl" optional="true">
         <name>vendor.qti.hardware.display.composer</name>
-        <version>2.0-1</version>
         <version>3.0</version>
         <interface>
             <name>IQtiComposer</name>
@@ -384,7 +398,6 @@
     </hal>
     <hal format="hidl" optional="true">
         <name>vendor.qti.hardware.display.mapper</name>
-        <version>2.0</version>
         <version>3.0</version>
         <version>4.0</version>
         <interface>
@@ -417,14 +430,6 @@
         </interface>
     </hal>
     <hal format="hidl" optional="true">
-        <name>vendor.qti.hardware.iop</name>
-        <version>2.0</version>
-        <interface>
-            <name>IIop</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
         <name>vendor.qti.hardware.mwqemadapter</name>
         <version>1.0</version>
         <interface>
@@ -437,14 +442,6 @@
         <version>1.0</version>
         <interface>
             <name>IPAL</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
-        <name>vendor.qti.hardware.perf</name>
-        <version>2.0-2</version>
-        <interface>
-            <name>IPerf</name>
             <instance>default</instance>
         </interface>
     </hal>
@@ -725,22 +722,6 @@
         </interface>
     </hal>
     <hal format="hidl" optional="true">
-        <name>vendor.qti.memory.pasrmanager</name>
-        <version>1.0-1</version>
-        <interface>
-            <name>IPasrManager</name>
-            <instance>pasrhal</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
-        <name>vendor.qti.power.pasrmanager</name>
-        <version>1.0</version>
-        <interface>
-            <name>IPasrManager</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
         <name>vendor.qti.qspmhal</name>
         <version>1.0</version>
         <interface>
@@ -757,26 +738,10 @@
         </interface>
     </hal>
     <hal format="hidl" optional="true">
-        <name>vendor.xiaomi.hardware.displayfeature</name>
-        <version>1.0</version>
-        <interface>
-            <name>IDisplayFeature</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
         <name>vendor.silead.hardware.fingerprintext</name>
         <version>1.0</version>
         <interface>
             <name>ISileadFingerprint</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
-        <name>vendor.xiaomi.hardware.mtdservice</name>
-        <version>1.0-2</version>
-        <interface>
-            <name>IMTService</name>
             <instance>default</instance>
         </interface>
     </hal>
