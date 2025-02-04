@@ -10,14 +10,13 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit common Aosp configurations
 $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
-TARGET_BOOT_ANIMATION_RES := 1080
-TARGET_SUPPORTS_QUICK_TAP := true
-TARGET_USES_AOSP_RECOVERY := true
-TARGET_DISABLE_EPPE := true
+
 
 # SkylineUI Maintainer Flags
-SKYLINEUI_MAINTAINER := SourceLab081
-
+#SKYLINEUI_MAINTAINER := SourceLab081
+TARGET_BOOT_ANIMATION_RES := 1080
+# HorizonDroid
+HORIZON_MAINTAINER := SourceLab081
 
 # Inherit from fog device
 $(call inherit-product, device/xiaomi/fog/device.mk)
@@ -27,6 +26,9 @@ PRODUCT_DEVICE := fog
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := Redmi
 PRODUCT_MODEL := Redmi 10C
+
+PRODUCT_SYSTEM_NAME := fog_global
+PRODUCT_SYSTEM_DEVICE := fog
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
