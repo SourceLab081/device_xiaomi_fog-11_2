@@ -33,6 +33,8 @@ PRODUCT_PACKAGES += \
     checkpoint_gc \
     otapreopt_script
 
+PRODUCT_PACKAGES += libui_compat_layer
+
 # ANT+
 PRODUCT_PACKAGES += \
     AntHalService-Soong \
