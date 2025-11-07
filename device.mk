@@ -4,6 +4,9 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+ALLOW_MISSING_DEPENDENCIES := true
+SELINUX_IGNORE_NEVERALLOWS := true
+
 # APEX's
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
