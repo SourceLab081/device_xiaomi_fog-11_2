@@ -152,13 +152,14 @@ BOARD_KERNEL_CMDLINE += \
     audit=0 \
     elevator=maple
 
-
+TARGET_KERNEL_ADDITIONAL_FLAGS += HOSTCFLAGS="-fuse-ld=lld -Wno-unused-command-line-argument"
+NEED_KERNEL_MODULE_SYSTEM := true
 TARGET_KERNEL_ARCH := arm64
-TARGET_KERNEL_ADDITIONAL_FLAGS += LD=ld.lld AR=llvm-ar NM=llvm-nm STRIP=llvm-strip OBJCOPY=llvm-objcopy OBJDUMP=llvm-objdump
 TARGET_KERNEL_CLANG_COMPILE := true
-TARGET_KERNEL_CLANG_PATH := prebuilts/yuki-clang
-TARGET_KERNEL_CLANG_VERSION := 18
-KERNEL_CLANG_TRIPLE := aarch64-linux-gnu-
+#TARGET_KERNEL_ADDITIONAL_FLAGS += LD=ld.lld AR=llvm-ar NM=llvm-nm STRIP=llvm-strip OBJCOPY=llvm-objcopy OBJDUMP=llvm-objdump
+#TARGET_KERNEL_CLANG_PATH := prebuilts/yuki-clang
+#TARGET_KERNEL_CLANG_VERSION := 18
+#KERNEL_CLANG_TRIPLE := aarch64-linux-gnu-
 TARGET_KERNEL_CONFIG := vendor/fog-hybris_defconfig
 TARGET_KERNEL_HEADERS := kernel/xiaomi/fog
 TARGET_KERNEL_SOURCE := kernel/xiaomi/fog
