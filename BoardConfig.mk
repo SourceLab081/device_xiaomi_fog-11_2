@@ -149,6 +149,7 @@ BOARD_KERNEL_CMDLINE += \
     video=vfb:640x400,bpp=32,memsize=3072000 \
     swiotlb=2048 \
     selinux=1 \
+    androidboot.selinux=permissive \
     audit=0 \
     elevator=maple
 
