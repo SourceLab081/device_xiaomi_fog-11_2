@@ -165,3 +165,5 @@ ro.lmk.use_minfree_levels=true
 ro.lmk.filecache_min_kb=153600
 ro.lmk.thrashing_limit=30
 ro.lmk.thrashing_limit_decay=50
+# Apex
+ro.apex.updatable=true
