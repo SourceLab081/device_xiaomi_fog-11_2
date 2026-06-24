@@ -288,13 +288,6 @@
         </interface>
         <fqname>@2.1::IHealth/default</fqname>
     </hal>
-    <hal format="aidl">
-        <name>android.hardware.power</name>
-        <interface>
-            <name>IPower</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
     <hal format="hidl">
         <name>android.hidl.allocator</name>
         <transport>hwbinder</transport>
